@@ -15,6 +15,17 @@ class UserRegistration(StatesGroup):
 class LogIn(StatesGroup):
     login = State()
     password = State()
+
+
+class ChangePerson(StatesGroup):
+    first_name = State()
+    last_name = State()
+    old_password = State()
+    accept_password = State()
+    description = State()
+    learning_rate = State()
+
+
 class Birthday(StatesGroup):
     year = State()
     month = State()

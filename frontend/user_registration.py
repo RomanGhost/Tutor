@@ -9,13 +9,13 @@ from backend import User, UserRegistration, Birthday, LogIn
 from backend import client, functions
 
 
-async def error_login_exist(message: Message, state: FSMContext):
+async def error_login_exist(message: Message):
     text = phrases.error_login_exist(message.text)
     await LogIn.password.set()
     await message.answer(text)
 
 
-async def error_login_signs(message: Message, state: FSMContext):
+async def error_login_signs(message: Message):
     text = phrases.error_login_sign(message.text)
     await message.answer(text)
 
@@ -30,7 +30,7 @@ async def request_first_name(message: Message, state: FSMContext):
     await UserRegistration.next()
 
 
-async def error_first_name(message: Message, state: FSMContext):
+async def error_first_name(message: Message):
     await message.answer(phrases.error_first_name)
 
 
@@ -42,7 +42,7 @@ async def request_last_name(message: Message, state: FSMContext):
     await UserRegistration.next()
 
 
-async def error_last_name(message: Message, state: FSMContext):
+async def error_last_name(message: Message):
     await message.answer(phrases.error_last_name)
 
 

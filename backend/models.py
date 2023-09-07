@@ -4,6 +4,7 @@ from datetime import datetime
 
 class User(BaseModel):
     id: int = Field(default=None)
+    telegram_id: int = Field(default=None)
     login: str = Field(default=None, min_length=3, max_length=25)
     password: str = Field(default=None, max_length=256)
     first_name: str = Field(default=None, min_length=2, max_length=255)
