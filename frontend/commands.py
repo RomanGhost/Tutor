@@ -40,4 +40,4 @@ def commands_controller(dp: Dispatcher):
     dp.register_message_handler(start, commands=['start'])
     dp.register_message_handler(registration, commands=['reg'])
     dp.register_message_handler(person, commands=['person'])
-    dp.register_message_handler(cancel, commands=['cancel'])
+    dp.register_message_handler(cancel,state='*', commands=['cancel'])

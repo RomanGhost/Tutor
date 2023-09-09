@@ -1,5 +1,5 @@
 from aiogram import Bot, Dispatcher, types
-import phrases
+from .phrases import learning_rate_ph
 
 button_back_person = types.InlineKeyboardButton("Назад", callback_data="back_person")
 markup_phonenumber = types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
@@ -10,16 +10,16 @@ markup_learning_rate = types.InlineKeyboardMarkup()
 # Добавляем кнопки для выбора степени обучения
 
 
-markup_learning_rate.add(types.InlineKeyboardButton(phrases.learning_rate_ph[0], callback_data="lr_0"))
-markup_learning_rate.add(types.InlineKeyboardButton(phrases.learning_rate_ph[1], callback_data="lr_1"))
-markup_learning_rate.add(types.InlineKeyboardButton(phrases.learning_rate_ph[2], callback_data="lr_2"))
-markup_learning_rate.add(types.InlineKeyboardButton(phrases.learning_rate_ph[3], callback_data="lr_3"))
-markup_learning_rate.add(types.InlineKeyboardButton(phrases.learning_rate_ph[4], callback_data="lr_4"))
-markup_learning_rate.add(types.InlineKeyboardButton(phrases.learning_rate_ph[5], callback_data="lr_5"))
-markup_learning_rate.add(types.InlineKeyboardButton(phrases.learning_rate_ph[6], callback_data="lr_6"))
-markup_learning_rate.add(types.InlineKeyboardButton(phrases.learning_rate_ph[7], callback_data="lr_7"))
-markup_learning_rate.add(types.InlineKeyboardButton(phrases.learning_rate_ph[8], callback_data="lr_8"))
-markup_learning_rate.add(types.InlineKeyboardButton(phrases.learning_rate_ph[9], callback_data="lr_9"))
+markup_learning_rate.add(types.InlineKeyboardButton(learning_rate_ph[0], callback_data="lr_0"))
+markup_learning_rate.add(types.InlineKeyboardButton(learning_rate_ph[1], callback_data="lr_1"))
+markup_learning_rate.add(types.InlineKeyboardButton(learning_rate_ph[2], callback_data="lr_2"))
+markup_learning_rate.add(types.InlineKeyboardButton(learning_rate_ph[3], callback_data="lr_3"))
+markup_learning_rate.add(types.InlineKeyboardButton(learning_rate_ph[4], callback_data="lr_4"))
+markup_learning_rate.add(types.InlineKeyboardButton(learning_rate_ph[5], callback_data="lr_5"))
+markup_learning_rate.add(types.InlineKeyboardButton(learning_rate_ph[6], callback_data="lr_6"))
+markup_learning_rate.add(types.InlineKeyboardButton(learning_rate_ph[7], callback_data="lr_7"))
+markup_learning_rate.add(types.InlineKeyboardButton(learning_rate_ph[8], callback_data="lr_8"))
+markup_learning_rate.add(types.InlineKeyboardButton(learning_rate_ph[9], callback_data="lr_9"))
 
 months = [
     "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
