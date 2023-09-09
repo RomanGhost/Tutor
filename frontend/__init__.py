@@ -1,5 +1,4 @@
 from .commands import commands_controller
-from .user_registration import registration_controller
 from .user_person import commands_user
 
 
