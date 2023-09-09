@@ -10,6 +10,11 @@ def change_user_first_name(telegram_id, new_first_name):
 def get_role(user_id=None, login=None, telegram_id=None):
     return ['teacher']
 
+def get_time_zone(user_id=None, login=None, telegram_id=None):
+    return 3
+
+def send_lesson(data):
+    return 'ok'
 
 def get_user(user_id=None, login=None, telegram_id=None):
     res = {

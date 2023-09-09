@@ -8,7 +8,7 @@ class CreateLesson(StatesGroup):
     time_hour = State()
     time_min = State()
     place = State()
-    max_lesson = State()
+    accept = State()
 
 
 # Add application

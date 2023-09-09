@@ -29,7 +29,7 @@ def markup_person(roles:list):
 
     for role in roles:
         if role == 'teacher':
-            markup.add(types.InlineKeyboardButton(text="Добавить занятие", callback_data=f"add_lesson"),)
+            markup.add(types.InlineKeyboardButton(text="Добавить занятие", callback_data=f"add_lesson"))
             break
 
     return markup
@@ -38,3 +38,20 @@ def markup_person(roles:list):
 markup_login = types.InlineKeyboardMarkup(row_width=2)
 markup_login.add(button_back_person)
 
+
+time_col = 4
+markup_hour_choose = types.InlineKeyboardMarkup(row_width=time_col)
+markup_hour_choose.add(
+    *[types.InlineKeyboardButton(f"{i}", callback_data=f"hour_{i}")for i in range(8, 22)]
+)
+
+markup_min_choose = types.InlineKeyboardMarkup(row_width=time_col)
+markup_min_choose.add(
+    *[types.InlineKeyboardButton(f"{i}", callback_data=f"min_{i}")for i in range(0, 60, 15)]
+)
+
+markup_accept = types.InlineKeyboardMarkup(row_width=2)
+markup_accept.add(
+types.InlineKeyboardButton(f"Добавить занятие", callback_data=f"accept"),
+types.InlineKeyboardButton(f"Отменить", callback_data=f"disagree")
+)
